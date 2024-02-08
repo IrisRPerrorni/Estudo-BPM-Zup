@@ -595,3 +595,125 @@ c) Facilitar a integração de back-ends de aplicativos como APIs gerenciadas.
 d) Aumentar a complexidade de gerenciamento de back-ends de aplicativos.
 
 ####  Resp: C
+_______________________________
+# Prova sobre Arquitetura Hexagonal
+
+### Questão 1: O que é a Arquitetura Hexagonal?
+
+a) Um modelo de arquitetura de software baseado em seis camadas distintas.
+
+b) Um padrão de arquitetura que usa um hexágono como representação visual das camadas do sistema.
+
+c) Um modelo de arquitetura que enfatiza a separação de preocupações e a dependência de interfaces.
+
+d) Um modelo de arquitetura que organiza o sistema em torno de um núcleo central.
+
+####  Resp: C
+
+### Questão 2: Qual é o principal objetivo da Arquitetura Hexagonal?
+
+a) Simplificar a estrutura de código do sistema.
+
+b) Reduzir o acoplamento entre os componentes do sistema.
+
+c) Aumentar a complexidade da arquitetura para melhorar o desempenho.
+
+d) Tornar o sistema mais difícil de manter e entender.
+
+####  Resp: B
+
+### Questão 3: Em um sistema que segue os princípios da Arquitetura Hexagonal, onde as regras de negócio devem residir?
+
+a) No banco de dados.
+
+b) No controlador da interface do usuário.
+
+c) Em classes dedicadas conhecidas como "portas" ou "adapters".
+
+d) Nas camadas de infraestrutura.
+
+####  Resp: C
+
+### Questão 4: Na Arquitetura Hexagonal, o que são as "portas"?
+
+a) Interfaces que expõem os serviços do sistema para uso externo.
+
+b) Componentes que lidam com a lógica de negócios do sistema.
+
+c) Camadas que interagem diretamente com o banco de dados.
+
+d) Classes de teste que simulam comportamentos externos ao sistema.
+
+####  Resp: A
+
+### Questão 5: Qual é a principal vantagem de usar a Arquitetura Hexagonal em um sistema?
+
+a) Maior complexidade e acoplamento entre os componentes.
+
+b) Maior facilidade de manutenção e testabilidade do código.
+
+c) Redução da modularidade e reutilização de código.
+
+d) Melhoria do desempenho do sistema.
+
+####  Resp: B
+
+### Questão 6: O que são os "adapters" na Arquitetura Hexagonal?
+
+a) Componentes que convertem dados entre o formato interno do sistema e os formatos externos.
+
+b) Classes responsáveis por executar as operações de persistência no banco de dados.
+
+c) Interfaces que definem os contratos entre os diferentes componentes do sistema.
+
+d) Componentes que encapsulam a lógica de negócios do sistema.
+
+####  Resp: A
+
+### Questão 7: Qual é o princípio fundamental da Arquitetura Hexagonal relacionado à dependência de frameworks e bibliotecas externas?
+
+a) Dependência de Alto Nível.
+
+b) Dependência de Baixo Nível.
+
+c) Inversão de Dependências.
+
+d) Acoplamento Forte.
+
+####  Resp: C
+
+### Questão 8: Como a Arquitetura Hexagonal contribui para a testabilidade do sistema?
+
+a) Aumentando a dependência de bibliotecas de mocking.
+
+b) Simplificando a estrutura do código para facilitar a escrita de testes.
+
+c) Ocultando a lógica de negócios dentro dos adaptadores.
+
+d) Tornando os testes de unidade mais difíceis de serem escritos.
+
+####  Resp: B
+
+### Questão 9: O que é o "core" na Arquitetura Hexagonal?
+
+a) A camada que contém as regras de negócio do sistema.
+
+b) O módulo que implementa a interface do usuário.
+
+c) Um conjunto de serviços que lidam com a comunicação externa.
+
+d) O banco de dados principal do sistema.
+
+####  Resp: A
+
+### Questão 10: Qual é a relação entre a Arquitetura Hexagonal e os princípios SOLID?
+
+a) A Arquitetura Hexagonal não está relacionada aos princípios SOLID.
+
+b) A Arquitetura Hexagonal viola os princípios SOLID.
+
+c) A Arquitetura Hexagonal é uma aplicação prática dos princípios SOLID.
+
+d) Os princípios SOLID são usados apenas em arquiteturas monolíticas.
+
+####  Resp: C
