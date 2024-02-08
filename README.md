@@ -318,3 +318,280 @@ c) Receber mensagens de uma fila SQS e imprimir seus corpos.
 d) Criar uma nova fila SQS.
 
 ####  Resp: C
+___________________________
+# Prova sobre AWS Lambda
+
+### Questão 1: O que é o AWS Lambda?
+
+a) Um serviço de armazenamento de objetos na nuvem.
+
+b) Um serviço de banco de dados relacional totalmente gerenciado pela AWS.
+
+c) Um serviço de computação serverless que permite executar código sem provisionar ou gerenciar servidores.
+
+d) Um serviço de balanceamento de carga para aplicativos web.
+
+####  Resp: C
+
+
+### Questão 2: Qual das seguintes linguagens de programação pode ser usada para escrever funções Lambda?
+
+a) JavaScript/Node.js
+
+b) Python
+
+c) Java
+
+d) Todas as opções acima
+
+####  Resp: D
+
+### Questão 3: Qual é o tempo máximo de execução padrão para uma função Lambda?
+
+a) 1 minuto
+
+b) 5 minutos
+
+c) 15 minutos
+
+d) 30 minutos
+
+####  Resp: B
+
+### Questão 4: Como você pode acionar uma função Lambda para ser executada periodicamente?
+
+a) Por meio de uma API Gateway.
+
+b) Por meio de um gatilho do Amazon SQS.
+
+c) Por meio de um evento do Amazon S3.
+
+d) Por meio de um evento do Amazon CloudWatch Events.
+
+####  Resp: C
+
+### Questão 5: Qual é a maneira correta de criar uma função Lambda usando o AWS CLI?
+
+a) aws lambda create-function --function-name my-function --runtime nodejs14.x --handler index.handler --role arn:aws:iam::123456789012:role/lambda-execution-role --zip-file fileb://function.zip
+
+b) aws lambda new-function --name my-function --runtime nodejs14.x --handler index.handler --role arn:aws:iam::123456789012:role/lambda-execution-role --code file://function.zip
+
+c) aws lambda add-function --function-name my-function --runtime nodejs14.x --handler index.handler --role arn:aws:iam::123456789012:role/lambda-execution-role --code fileb://function.zip
+
+d) aws lambda deploy-function --function-name my-function --runtime nodejs14.x --handler index.handler --role arn:aws:iam::123456789012:role/lambda-execution-role --package function.zip
+
+####  Resp: A
+
+### Questão 6: Qual é a maneira correta de definir variáveis de ambiente para uma função Lambda usando o console AWS Lambda?
+
+a) No código da função Lambda, usando a palavra-chave environment.
+
+b) Na configuração do gatilho associado à função Lambda.
+
+c) No arquivo de configuração da função Lambda no console AWS Lambda.
+
+d) Na configuração da função Lambda, em "Configurações avançadas".
+
+####  Resp: D
+
+### Questão 7: Qual é a maneira correta de invocar uma função Lambda síncrona usando o SDK do AWS Lambda para Python (Boto3)?
+
+```bash
+a) 
+import boto3
+
+client = boto3.client('lambda')
+response = client.invoke(
+    FunctionName='my-function',
+    InvocationType='RequestResponse',
+    Payload=b'{}'
+)
+```
+```bash
+b) 
+import boto3
+
+lambda = boto3.resource('lambda')
+function = lambda.get_function(FunctionName='my-function')
+response = function.invoke()
+```bash
+```
+c)
+import boto3
+
+client = boto3.client('lambda')
+response = client.run_function(
+    FunctionName='my-function',
+    InvocationType='RequestResponse',
+    Payload=b'{}'
+)
+```bash
+```
+```bash
+d) 
+import boto3
+
+lambda = boto3.resource('lambda')
+function = lambda.Function('my-function')
+response = function.invoke()
+```
+####  Resp: A
+
+### Questão 8: Qual das seguintes opções descreve corretamente a diferença entre invocação síncrona e assíncrona de uma função Lambda?
+
+a) Na invocação síncrona, a função Lambda é invocada automaticamente em intervalos regulares. Na invocação assíncrona, a função Lambda é invocada manualmente pelo usuário.
+
+b) Na invocação síncrona, a função Lambda é invocada de forma que a resposta é retornada imediatamente após a conclusão da execução. Na invocação assíncrona, a função Lambda é invocada sem esperar pela resposta imediata.
+
+c) Na invocação síncrona, a função Lambda é invocada apenas uma vez, enquanto na invocação assíncrona ela é invocada continuamente em loop até que seja interrompida.
+
+d) Na invocação síncrona, a função Lambda é invocada manualmente pelo usuário. Na invocação assíncrona, a função Lambda é invocada automaticamente em intervalos regulares.
+
+####  Resp: B
+
+### Questão 9: Qual é a maneira correta de conceder permissões a uma função Lambda para acessar recursos da AWS?
+
+a) Apenas usando políticas de acesso do IAM anexadas à função Lambda.
+
+b) Apenas usando chaves de acesso da AWS configuradas na função Lambda.
+
+c) Apenas usando grupos de segurança associados à função Lambda.
+
+d) Apenas usando tags de identificação associadas à função Lambda.
+
+####  Resp: A
+
+### Questão 10: Qual é o principal benefício de usar AWS Lambda em comparação com servidores tradicionais?
+
+a) AWS Lambda oferece maior controle e personalização do ambiente de execução.
+
+b) AWS Lambda elimina a necessidade de provisionamento e gerenciamento de servidores.
+
+c) AWS Lambda oferece melhor desempenho em aplicações de alto tráfego.
+
+d) AWS Lambda é mais adequado para aplicativos monolíticos do que para arquiteturas de microsserviços.
+
+####  Resp: B
+
+________________________________________________
+# Prova sobre Amazon API Gateway
+
+### Questão 1: Qual das seguintes afirmações sobre o Amazon API Gateway está correta?
+
+a) O Amazon API Gateway é um banco de dados relacional totalmente gerenciado pela AWS.
+
+b) O Amazon API Gateway é um serviço de armazenamento de objetos na nuvem.
+
+c) O Amazon API Gateway é um serviço que permite a criação, publicação, manutenção, monitoramento e proteção de APIs.
+
+d) O Amazon API Gateway é um serviço de processamento em tempo real de grandes volumes de dados.
+
+####  Resp: C
+
+### Questão 2: Qual é o principal objetivo do Amazon API Gateway?
+
+a) Facilitar a implantação de aplicativos web.
+
+b) Permitir a comunicação síncrona entre diferentes partes de uma aplicação.
+
+c) Expor back-ends de aplicativos como APIs gerenciadas.
+
+d) Armazenar e distribuir conteúdo estático, como imagens e vídeos.
+
+####  Resp: C
+
+### Questão 3: Qual é o tipo de API oferecido pelo Amazon API Gateway?
+
+a) API RDBMS (Relational Database Management System)
+
+b) API RCU (Request-Response Communication Unit)
+
+c) API RESTful (Representational State Transfer)
+
+d) API LSM (Least Recently Used)
+
+####  Resp: C
+
+### Questão 4: O que é um recurso no contexto do Amazon API Gateway?
+
+a) Um endpoint que fornece acesso a um serviço da AWS.
+
+b) Uma etapa no processamento de uma solicitação HTTP.
+
+c) Uma representação de uma entidade de negócios na API.
+
+d) Um contêiner de objetos armazenados no serviço.
+
+####  Resp: C
+
+### Questão 5: Qual é a principal vantagem de usar o Amazon API Gateway para expor back-ends de aplicativos como APIs?
+
+a) Aumenta a latência do sistema.
+
+b) Melhora a segurança da aplicação.
+
+c) Reduz a escalabilidade da aplicação.
+
+d) Torna os back-ends mais complexos de gerenciar.
+
+####  Resp: B
+
+### Questão 6: Qual é a maneira correta de definir um endpoint no Amazon API Gateway?
+
+a) No código fonte da função Lambda associada à API.
+
+b) Na configuração do gatilho associado à API.
+
+c) No arquivo de configuração da API no console AWS API Gateway.
+
+d) Na definição de recursos e métodos da API no console AWS API Gateway.
+
+####  Resp: D
+
+### Questão 7: Qual é a diferença entre os tipos de integração "Lambda Proxy" e "Lambda" no Amazon API Gateway?
+
+a) Não há diferença; ambos os tipos de integração são usados para integrar funções Lambda à API.
+
+b) A integração "Lambda Proxy" passa todos os detalhes da solicitação para a função Lambda, enquanto a integração "Lambda" permite uma transformação da solicitação antes de ser enviada para a função Lambda.
+
+c) A integração "Lambda Proxy" permite a execução de funções Lambda em contêineres, enquanto a integração "Lambda" só suporta a execução de funções Lambda sem contêineres.
+
+d) A integração "Lambda Proxy" só suporta a execução de funções Lambda de forma assíncrona, enquanto a integração "Lambda" suporta a execução de funções Lambda de forma síncrona.
+
+####  Resp: B
+
+### Questão 8: Qual é a diferença entre uma API RESTful e uma API WebSocket?
+
+a) Uma API RESTful é usada para comunicação síncrona, enquanto uma API WebSocket é usada para comunicação assíncrona.
+
+b) Uma API RESTful é baseada no protocolo HTTP, enquanto uma API WebSocket é baseada no protocolo WebSocket.
+
+c) Uma API RESTful é mais adequada para comunicação em tempo real, enquanto uma API WebSocket é mais adequada para comunicação ocasional.
+
+d) Uma API RESTful requer uma conexão persistente entre cliente e servidor, enquanto uma API WebSocket não requer essa conexão.
+
+####  Resp: B
+
+### Questão 9: Como você pode controlar o acesso à sua API no Amazon API Gateway?
+
+a) Usando políticas de controle de acesso integradas ao AWS Lambda.
+
+b) Apenas configurando regras de firewall no Amazon EC2.
+
+c) Usando chaves de API e políticas de controle de acesso no Amazon API Gateway.
+
+d) Permitindo apenas acesso interno à API.
+
+####  Resp: C
+
+Questão 10: Qual é o principal benefício de usar o Amazon API Gateway?
+
+a) Melhorar o desempenho de computação em seus aplicativos.
+
+b) Reduzir a escalabilidade dos back-ends dos aplicativos.
+
+c) Facilitar a integração de back-ends de aplicativos como APIs gerenciadas.
+
+d) Aumentar a complexidade de gerenciamento de back-ends de aplicativos.
+
+####  Resp: C
